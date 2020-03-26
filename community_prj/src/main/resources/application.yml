@@ -1,11 +1,27 @@
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/xczx?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/community?serverTimezone=UTC&characterEncoding=utf8
     username: root
     password: root123
-  mvc:
-    view:
-      suffix: .html
-    static-path-pattern: /**
-  resources:
-    static-locations: classpath:/templates/,classpath:/static/
+#  mvc:
+#    view:
+#      suffix: .html
+##    static-path-pattern: /**
+#  resources:
+#    static-locations: classpath:/templates/,classpath:/static/
+
+  thymeleaf:
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    cache: false
+
+
+
+gitee:
+  client_id: 0d58e9b09565b080afe096ff1106f5d391d929f4cae340f6b8dcf4be7c5824f8
+  client_secret: 3feb958606ae6546cf69961aaf197af14d991d6b824a002c3643afcde93c6182
+  redirect_uri: http://localhost:8080/callback
+  grant_type: authorization_code
+server:
+  port: 8080

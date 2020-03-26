@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh_CN" xmlns:th="http://www.thymeleaf.org" >
 <head >
-    <title>大侠社区</title>
+    <title>发布</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/community.css">
 
 
     <!-- 引入 Bootstrap -->
@@ -53,5 +54,33 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12  col-xm-12 col-xs-12" >
+            <h3><span class="glyphicon  glyphicon-menu-hamburger" aria-hidden="true">发起</span></h3>
+            <hr/>
+            <form action="">
+                <div class="form-group">
+                    <label for="title">问题标题：</label>
+                    <input type="text" class="form-control" id="title" placeholder="问题标题">
+                </div>
+                <div class="form-group">
+                    <label for="title">问题补充：</label>
+                    <textarea name="description" id="description" class="form-control" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tag">添加标签：</label>
+                    <input type="text" class="form-control" id="tag" placeholder="请输入标签">
+                </div>
+                <button type="submit" class="btn btn-success btn-publish">发布</button>
+            </form>
+        </div>
+
+        <div class="col-lg-3 col-md-12  col-xm-12 col-xs-12" >
+            <h2>问题补充</h2>
+            <span>这是一个神奇的网站</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>
